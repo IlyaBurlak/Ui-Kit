@@ -1,0 +1,38 @@
+@import '../../styles/variables.scss';
+
+.ui-button {
+  font-family: $font-family;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  color: white;
+  background-color: $color-primary;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.ui-button--primary {
+  background-color: $color-primary;
+}
+
+.ui-button--secondary {
+  background-color: $color-gray;
+}
+
+.ui-button--small {
+  padding: 6px 10px;
+  font-size: 14px;
+}
+.ui-button--medium {
+  padding: 10px 16px;
+  font-size: 16px;
+}
+.ui-button--large {
+  padding: 14px 20px;
+  font-size: 18px;
+}
+
+.ui-button:active {
+  transform: translateY(1px);
+}
