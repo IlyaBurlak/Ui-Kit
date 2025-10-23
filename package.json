@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-  "build": "vite build && npm run build:types && node ./scripts/attach-css.cjs",
+  "build": "vite build && npm run build:types",
   "build:types": "tsc -p tsconfig.build.json",
     "preview": "vite preview",
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
@@ -48,6 +48,9 @@
   "files": [
     "dist",
     "index.d.ts"
+  ],
+  "sideEffects": [
+    "dist/ui-kit.css"
   ],
   "repository": {
     "type": "git",
