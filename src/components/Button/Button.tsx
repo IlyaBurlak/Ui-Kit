@@ -1,15 +1,8 @@
-import React from 'react';
+import { CSSProperties, FC } from 'react';
 import './button.scss';
+import { ButtonProps } from './Button.types.ts';
 
-export interface ButtonProps {
-  primary?: boolean;
-  backgroundColor?: string;
-  size?: 'small' | 'medium' | 'large';
-  label: string;
-  onClick?: () => void;
-}
-
-export const Button: React.FC<ButtonProps> = ({
+export const Button:FC<ButtonProps> = ({
   primary = false,
   size = 'medium',
   backgroundColor,
@@ -18,7 +11,7 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   const className = ['ui-button', `ui-button--${size}`, primary ? 'ui-button--primary' : 'ui-button--secondary'].join(' ');
 
-  const style = backgroundColor ? { backgroundColor } as React.CSSProperties : undefined;
+  const style = backgroundColor ? { backgroundColor } as CSSProperties : undefined;
 
   return (
     <button type="button" className={className} style={style} {...props}>
@@ -26,5 +19,3 @@ export const Button: React.FC<ButtonProps> = ({
     </button>
   );
 };
-
-export default Button;
