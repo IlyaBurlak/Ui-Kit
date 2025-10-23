@@ -1,6 +1,6 @@
 {
   "name": "@ilya_burlak/ui-kit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A small React + TypeScript UI Kit with SCSS components",
   "type": "module",
   "scripts": {
